@@ -119,3 +119,7 @@ body {
     /* border-primary */
     box-shadow: 0 0 15px rgba(220, 38, 38, 0.4);
 }
+
+section {
+    overflow: hidden;
+}
