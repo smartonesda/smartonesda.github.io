@@ -1,0 +1,121 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Glassmorphism Red Style */
+.glass-red {
+    background: rgba(20, 5, 5, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(220, 38, 38, 0.2);
+    box-shadow: 0 4px 30px rgba(220, 38, 38, 0.1);
+}
+
+.glass-card {
+    background: rgba(30, 10, 10, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(220, 38, 38, 0.1);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(220, 38, 38, 0.15);
+    border-color: rgba(220, 38, 38, 0.5);
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.2);
+}
+
+/* Scrollbar Merah */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7f1d1d;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #dc2626;
+}
+
+/* Hex Grid Background */
+.cyber-grid {
+    background-image:
+        linear-gradient(to right, rgba(220, 38, 38, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(220, 38, 38, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+/* Tech Item */
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    /* gap-3 */
+    font-size: 1.25rem;
+    /* text-xl */
+    line-height: 1.75rem;
+    font-weight: 700;
+    /* font-bold */
+    color: #64748b;
+    /* text-slate-500 */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    /* tracking-wider */
+    cursor: default;
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition-colors */
+}
+
+.tech-item:hover {
+    color: white;
+}
+
+.tech-item i {
+    width: 1.5rem;
+    /* w-6 */
+    height: 1.5rem;
+    /* h-6 */
+}
+
+/* Filter Button */
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    /* px-6 py-2 */
+    background-color: #050000;
+    /* bg-dark-950 */
+    border: 1px solid #2b0b0b;
+    /* border-dark-800 */
+    color: #64748b;
+    /* text-slate-500 */
+    font-size: 0.875rem;
+    /* text-sm */
+    font-weight: 700;
+    /* font-bold */
+    letter-spacing: 0.1em;
+    /* tracking-widest */
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition-all */
+    transform: skewX(-10deg);
+    /* skew-x-[-10deg] */
+}
+
+.filter-btn:hover {
+    color: white;
+    border-color: #dc2626;
+    /* hover:border-primary */
+}
+
+.filter-btn.active {
+    background-color: #dc2626;
+    /* bg-primary */
+    color: white;
+    border-color: #dc2626;
+    /* border-primary */
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.4);
+}

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartOneDev - Official Repository of SMKS Antartika 1 Sidoarjo</title>
+    <meta name="description"
+        content="Wadah elit siswa Rekayasa Perangkat Lunak SMKS Antartika 1 Sidoarjo. Showcase project, open source, dan kolaborasi.">
+    <meta name="author" content="SmartOneDev Team">
+    <link rel="icon" href="assets/images/dark-removebg-preview.png">
+    <link rel="apple-touch-icon" href="assets/images/dark-removebg-preview.png">
+    <link rel="shortcut icon" href="assets/images/dark-removebg-preview.png">
+    <meta property="og:title" content="SmartOneDev - Official Repository of SMKS Antartika 1 Sidoarjo">
+    <meta property="og:description"
+        content="Wadah elit siswa Rekayasa Perangkat Lunak SMKS Antartika 1 Sidoarjo. Showcase project, open source, dan kolaborasi.">
+    <meta property="og:image" content="assets/images/dark-removebg-preview.png">
+    <meta property="og:url" content="https://smartonesda.github.io">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SmartOneDev - Official Repository of SMKS Antartika 1 Sidoarjo">
+    <meta name="twitter:description"
+        content="Wadah elit siswa Rekayasa Perangkat Lunak SMKS Antartika 1 Sidoarjo. Showcase project, open source, dan kolaborasi.">
+    <meta name="twitter:image" content="assets/images/dark-removebg-preview.png">
+    <meta name="twitter:url" content="https://smartonesda.github.io">
+
+    <!-- 1. Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- 2. Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 3. Tailwind Config -->
+    <script src="assets/js/tailwind-config.js"></script>
+
+    <!-- 4. Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code&display=swap"
+        rel="stylesheet">
+
+    <!-- 5. Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 6. AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- 7. Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-dark-950 text-slate-200 selection:bg-primary/30 selection:text-white overflow-x-hidden">
+
+    <!-- ================= NAVBAR (Glass Red) ================= -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <!-- Logo Image -->
+                <img src="assets/images/dark-removebg-preview.png" alt="SmartOneDev Logo"
+                    class="w-24 h-auto drop-shadow-[0_0_15px_rgba(220,38,38,0.5)] hover:drop-shadow-[0_0_25px_rgba(220,38,38,0.8)] transition-all duration-300">
+                <!-- <span class="text-2xl font-extrabold tracking-tight">
+                    <span class="text-white drop-shadow-[0_0_5px_rgba(220,38,38,0.8)]">SmartOne</span><span
+                        class="text-primary-glow">Dev</span>
+                </span> -->
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#beranda"
+                    class="nav-link text-slate-300 hover:text-primary-glow transition-colors text-sm uppercase tracking-widest hover:drop-shadow-[0_0_8px_rgba(220,38,38,0.8)]">Beranda</a>
+                <a href="#tentang"
+                    class="nav-link text-slate-300 hover:text-primary-glow transition-colors text-sm uppercase tracking-widest hover:drop-shadow-[0_0_8px_rgba(220,38,38,0.8)]">Tentang</a>
+                <a href="#karya"
+                    class="nav-link text-slate-300 hover:text-primary-glow transition-colors text-sm uppercase tracking-widest hover:drop-shadow-[0_0_8px_rgba(220,38,38,0.8)]">Karya</a>
+                <a href="#kolaborasi"
+                    class="nav-link text-slate-300 hover:text-primary-glow transition-colors text-sm uppercase tracking-widest hover:drop-shadow-[0_0_8px_rgba(220,38,38,0.8)]">Kolaborasi</a>
+
+                <a href="https://github.com/smartonesda" target="_blank"
+                    class="relative overflow-hidden bg-dark-900 text-white border border-slate-700 px-6 py-2 rounded-none transform skew-x-[-10deg] hover:bg-dark-800 hover:border-white transition-all group">
+                    <span
+                        class="block transform skew-x-[10deg] font-bold tracking-widest text-sm flex items-center gap-2">
+                        <i data-lucide="github" class="w-4 h-4"></i> SHOW GITHUB
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute w-full glass-red border-b border-red-900/50 p-4 flex flex-col gap-4 shadow-2xl mt-4">
+            <a href="#beranda" class="mobile-link text-white p-2 hover:bg-red-900/30 rounded">Beranda</a>
+            <a href="#tentang" class="mobile-link text-white p-2 hover:bg-red-900/30 rounded">Tentang</a>
+            <a href="#karya" class="mobile-link text-white p-2 hover:bg-red-900/30 rounded">Karya</a>
+            <a href="#kolaborasi" class="mobile-link text-white p-2 hover:bg-red-900/30 rounded">Kolaborasi</a>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="beranda" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 bg-dark-950">
+            <div class="cyber-grid absolute inset-0 opacity-40"></div>
+            <!-- Red Glowing Orbs -->
+            <div
+                class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[150px] animate-pulse-slow">
+            </div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-red-900/30 rounded-full blur-[120px] animate-pulse-slow"
+                style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+            <!-- Badge -->
+            <div data-aos="fade-down"
+                class="inline-flex items-center gap-3 bg-red-950/50 border border-primary/40 backdrop-blur-md rounded-full px-5 py-2 mb-8 shadow-[0_0_20px_rgba(220,38,38,0.3)]">
+                <span class="relative flex h-3 w-3">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+                </span>
+                <span class="text-sm text-red-100 font-mono tracking-widest uppercase">System Online • v.2.0.24</span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 data-aos="zoom-in"
+                class="text-6xl md:text-8xl font-black text-white mb-6 leading-tight tracking-tighter drop-shadow-2xl">
+                SMARTONE<span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">DEV</span>
+            </h1>
+
+            <h2 data-aos="fade-up" data-aos-delay="100"
+                class="text-2xl md:text-3xl text-slate-300 mb-8 font-light tracking-wide">
+                <span class="text-primary font-bold">SMKS Antartika 1</span> RPL Division
+            </h2>
+
+            <p data-aos="fade-up" data-aos-delay="200"
+                class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed border-l-2 border-primary/50 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
+                Wadah elit siswa Rekayasa Perangkat Lunak. Kami tidak hanya menulis kode, kami merancang masa depan
+                dengan <span class="text-white font-bold bg-primary/20 px-1">passion</span> dan <span
+                    class="text-white font-bold bg-primary/20 px-1">inovasi</span>.
+            </p>
+
+            <!-- CTAs -->
+            <div data-aos="fade-up" data-aos-delay="300"
+                class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#karya"
+                    class="group relative w-full sm:w-auto overflow-hidden bg-primary text-white px-8 py-4 font-bold text-lg tracking-wider shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_40px_rgba(220,38,38,0.6)] transition-all skew-x-[-10deg]">
+                    <span class="block transform skew-x-[10deg] flex items-center justify-center gap-2">
+                        EXPLORE PROJECTS <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </span>
+                    <div
+                        class="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    </div>
+                </a>
+
+                <a href="https://github.com/smartonesda" target="_blank"
+                    class="md:hidden block w-full sm:w-auto px-8 py-4 border border-slate-600 hover:border-white text-slate-300 hover:text-white font-bold text-lg tracking-wider transition-all skew-x-[-10deg] bg-dark-900/50 hover:bg-dark-800">
+                    <span class="block transform skew-x-[10deg] flex items-center justify-center gap-2">
+                        <i data-lucide="github" class="w-5 h-5"></i> GITHUB
+                    </span>
+                </a>
+            </div>
+
+            <!-- Decor Elements -->
+            <div
+                class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-px h-24 bg-gradient-to-b from-primary to-transparent animate-pulse">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SEAMLESS TECH MARQUEE (FIXED) ================= -->
+    <div class="bg-black/50 border-y border-red-900/30 overflow-hidden relative z-20 backdrop-blur-sm py-6">
+        <!-- Efek Fade di Kiri Kanan -->
+        <div class="absolute left-0 top-0 h-full w-20 md:w-40 bg-gradient-to-r from-dark-950 to-transparent z-10"></div>
+        <div class="absolute right-0 top-0 h-full w-20 md:w-40 bg-gradient-to-l from-dark-950 to-transparent z-10">
+        </div>
+
+        <!-- Wrapper Marquee -->
+        <div class="flex w-max overflow-hidden group">
+            <!-- 
+                LOGIKA SEAMLESS: 
+                Kita buat 2 set konten identik di dalam container.
+                Animasinya bergerak dari 0 ke -50%.
+                Saat mencapai -50%, dia akan 'teleport' kembali ke 0 secara visual tidak terlihat.
+             -->
+            <div class="animate-marquee flex gap-16 items-center whitespace-nowrap px-8">
+                <!-- SET 1 -->
+                <span class="tech-item"><i data-lucide="code-2" class="text-primary"></i> HTML5</span>
+                <span class="tech-item"><i data-lucide="file-code" class="text-blue-500"></i> CSS3</span>
+                <span class="tech-item"><i data-lucide="coffee" class="text-yellow-500"></i> JavaScript</span>
+                <span class="tech-item"><i data-lucide="atom" class="text-cyan-400"></i> React</span>
+                <span class="tech-item"><i data-lucide="database" class="text-red-500"></i> Laravel</span>
+                <span class="tech-item"><i data-lucide="server" class="text-indigo-400"></i> PHP</span>
+                <span class="tech-item"><i data-lucide="smartphone" class="text-blue-400"></i> Flutter</span>
+                <span class="tech-item"><i data-lucide="git-branch" class="text-orange-500"></i> Git</span>
+                <span class="tech-item"><i data-lucide="cpu" class="text-white"></i> Arduino</span>
+                <span class="tech-item"><i data-lucide="cloud" class="text-sky-300"></i> Tailwind</span>
+
+                <!-- SET 2 (DUPLIKAT PERSIS DARI SET 1) -->
+                <span class="tech-item"><i data-lucide="code-2" class="text-primary"></i> HTML5</span>
+                <span class="tech-item"><i data-lucide="file-code" class="text-blue-500"></i> CSS3</span>
+                <span class="tech-item"><i data-lucide="coffee" class="text-yellow-500"></i> JavaScript</span>
+                <span class="tech-item"><i data-lucide="atom" class="text-cyan-400"></i> React</span>
+                <span class="tech-item"><i data-lucide="database" class="text-red-500"></i> Laravel</span>
+                <span class="tech-item"><i data-lucide="server" class="text-indigo-400"></i> PHP</span>
+                <span class="tech-item"><i data-lucide="smartphone" class="text-blue-400"></i> Flutter</span>
+                <span class="tech-item"><i data-lucide="git-branch" class="text-orange-500"></i> Git</span>
+                <span class="tech-item"><i data-lucide="cpu" class="text-white"></i> Arduino</span>
+                <span class="tech-item"><i data-lucide="cloud" class="text-sky-300"></i> Tailwind</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= TENTANG SECTION ================= -->
+    <section id="tentang" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Visual -->
+                <div data-aos="fade-right" class="relative group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <div class="glass-card rounded-xl p-8 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-20"><i data-lucide="terminal"
+                                class="w-32 h-32 text-primary"></i></div>
+                        <h4 class="text-slate-500 font-mono text-xs mb-4">/root/mission.config</h4>
+                        <div class="space-y-4 font-mono text-sm">
+                            <p><span class="text-purple-400">const</span> <span
+                                    class="text-yellow-400">SmartOneDev</span>
+                                = {</p>
+                            <p class="pl-4">school: <span class="text-green-400">'SMKS Antartika 1 Sidoarjo'</span>,</p>
+                            <p class="pl-4">focus: [<span class="text-green-400">'Web'</span>, <span
+                                    class="text-green-400">'Mobile'</span>, <span class="text-green-400">'IoT'</span>],
+                            </p>
+                            <p class="pl-4">status: <span class="text-primary animate-pulse">'Always Learning'</span>
+                            </p>
+                            <p>}</p>
+                            <p class="text-slate-500">// Bersama membangun ekosistem digital.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h2 class="text-primary font-bold tracking-[0.2em] uppercase mb-2 text-sm flex items-center gap-2">
+                        <span class="w-8 h-[2px] bg-primary"></span> About Us
+                    </h2>
+                    <h3 class="text-4xl md:text-5xl font-black text-white mb-6">
+                        LEBIH DARI SEKEDAR <br> <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">KOMUNITAS.</span>
+                    </h3>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-8 border-l-4 border-dark-800 pl-4">
+                        SmartOnesDA adalah "Special Force"-nya anak RPL Antartika 1. Kami menggabungkan kedisiplinan
+                        sekolah dengan kreativitas startup teknologi. Disini, senior dan junior duduk sama rendah,
+                        berdiri sama tinggi untuk memecahkan masalah dengan kode.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-lg bg-dark-900/50 border border-dark-800 hover:border-primary/50 transition-all">
+                            <div class="bg-primary/20 p-3 rounded text-primary"><i data-lucide="users"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">Kolaborasi</h4>
+                                <p class="text-xs text-slate-500">Lintas angkatan & skill</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-lg bg-dark-900/50 border border-dark-800 hover:border-primary/50 transition-all">
+                            <div class="bg-primary/20 p-3 rounded text-primary"><i data-lucide="rocket"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">Inovasi Nyata</h4>
+                                <p class="text-xs text-slate-500">Produk yang bisa dipakai</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECT GALLERY SECTION ================= -->
+    <section id="karya" class="py-24 bg-dark-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-dark-800 pb-8">
+                <div data-aos="fade-right">
+                    <h2 class="text-primary font-bold tracking-[0.2em] uppercase mb-2 text-sm">Portfolio</h2>
+                    <h3 class="text-4xl font-black text-white">MAHAKARYA SISWA</h3>
+                </div>
+
+                <div data-aos="fade-left" class="flex flex-wrap gap-2" id="filter-buttons">
+                    <button data-filter="All" class="filter-btn active">ALL</button>
+                    <button data-filter="Web App" class="filter-btn">WEB</button>
+                    <button data-filter="Mobile" class="filter-btn">MOBILE</button>
+                    <button data-filter="Game" class="filter-btn">GAME</button>
+                    <button data-filter="IoT" class="filter-btn">IoT</button>
+                </div>
+
+            </div>
+
+            <!-- Grid -->
+            <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Javascript will inject cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CTA / JOIN SECTION ================= -->
+    <section id="kolaborasi" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-dark-950">
+            <div class="absolute bottom-0 right-0 w-full h-[500px] bg-gradient-to-t from-primary/10 to-transparent">
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 relative z-10 text-center">
+            <div data-aos="zoom-in" class="glass-red p-12 rounded-3xl relative overflow-hidden group">
+                <!-- Background Animation inside card -->
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent animate-marquee">
+                </div>
+
+                <i data-lucide="git-pull-request" class="w-24 h-24 text-primary mx-auto mb-6 opacity-80"></i>
+
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase">
+                    Jangan Coding <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">Sendirian.</span>
+                </h2>
+                <p class="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
+                    Repository kami terbuka. Bug menunggu untuk di-fix. Fitur baru menunggu untuk dibuat. Bergabunglah
+                    dengan SmartOnesDA dan buat commit pertamamu.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://github.com/smartonesda" target="_blank"
+                        class="flex items-center justify-center gap-3 bg-white text-dark-950 px-8 py-4 font-bold text-lg rounded hover:bg-slate-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                        <i data-lucide="github"></i> CONTRIBUTE NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-black pt-16 border-t border-red-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-primary/10 p-1.5 rounded-sm skew-x-[-10deg]">
+                            <img src="assets/images/dark-removebg-preview.png" alt="Logo"
+                                class="w-8 h-auto transform skew-x-[10deg]">
+                        </div>
+                        <span class="text-xl font-black text-white tracking-tighter">SmartOneDev<span
+                                class="text-primary">DA</span></span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        Siwalanpanji, Kec. Buduran, Kabupaten Sidoarjo, Jawa Timur 61252.
+                        <br>Mencetak talenta digital masa depan.
+                    </p>
+                </div>
+
+                <div class="text-center md:text-left">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Connect</h4>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="#"
+                            class="w-10 h-10 bg-dark-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"><i
+                                data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-dark-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"><i
+                                data-lucide="github" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-dark-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"><i
+                                data-lucide="mail" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="text-right">
+                    <p class="text-slate-600 text-sm">
+                        &copy; 2025 SmartOnesDA. <br>
+                        Designed by <span class="text-primary font-bold">Riski Putra Alamzah</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js" defer></script>
+</body>
+
+</html>
