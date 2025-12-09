@@ -1,7 +1,7 @@
 # SmartOneDev - Official Portfolio
 > **"Special Force"-nya RPL SMKS Antartika 1 Sidoarjo.**
 
-![Project Preview](https://smartonesda.github.io/assets/images/light-smartone.png)
+![Project Preview](assets/images/light-smartone.png)
 
 ## 📌 Tentang Project
 **SmartOneDev** adalah wadah kolaborasi elit siswa jurusan **Rekayasa Perangkat Lunak (RPL)** di SMKS Antartika 1 Sidoarjo. Repository ini adalah landing page resmi yang menampilkan portofolio, inovasi, dan semangat *open source* siswa-siswi kami.
