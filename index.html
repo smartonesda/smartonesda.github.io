@@ -8,82 +8,89 @@
     <meta name="description"
         content="Wadah elit siswa Rekayasa Perangkat Lunak SMKS Antartika 1 Sidoarjo. Showcase project, open source, dan kolaborasi.">
     <meta name="author" content="SmartOneDev Team">
+
+    <!-- Favicon -->
     <link rel="icon" href="assets/images/dark-removebg-preview.png">
     <link rel="apple-touch-icon" href="assets/images/dark-removebg-preview.png">
     <link rel="shortcut icon" href="assets/images/dark-removebg-preview.png">
+
+    <!-- Meta Social -->
     <meta property="og:title" content="SmartOneDev - Official Repository of SMKS Antartika 1 Sidoarjo">
     <meta property="og:description"
         content="Wadah elit siswa Rekayasa Perangkat Lunak SMKS Antartika 1 Sidoarjo. Showcase project, open source, dan kolaborasi.">
     <meta property="og:image" content="assets/images/dark-removebg-preview.png">
     <meta property="og:url" content="https://smartonesda.github.io">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SmartOneDev - Official Repository of SMKS Antartika 1 Sidoarjo">
-    <meta name="twitter:description"
-        content="Wadah elit siswa Rekayasa Perangkat Lunak SMKS Antartika 1 Sidoarjo. Showcase project, open source, dan kolaborasi.">
-    <meta name="twitter:image" content="assets/images/dark-removebg-preview.png">
-    <meta name="twitter:url" content="https://smartonesda.github.io">
 
-    <!-- 1. Preconnect to CDNs -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com">
-
-    <!-- 2. Tailwind CSS CDN -->
+    <!-- 1. Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- 3. Tailwind Config -->
+    <!-- 2. Tailwind Config (Existing Theme) -->
     <script src="assets/js/tailwind-config.js"></script>
 
-    <!-- 4. Google Fonts -->
+    <!-- 3. Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code&display=swap"
         rel="stylesheet">
 
-    <!-- 5. Lucide Icons -->
+    <!-- 4. Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- 6. AOS Animation -->
+    <!-- 5. AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- 7. Custom CSS -->
+    <!-- 6. Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* Efek Glow pada Hover Card (Modified to use Red Theme Variables) */
+        .project-card:hover {
+            box-shadow: 0 0 25px -5px var(--glow-color);
+            border-color: var(--glow-color);
+        }
+
+        /* Active Menu State */
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: #dc2626;
+            /* primary color */
+        }
+    </style>
 </head>
 
 <body class="bg-dark-950 text-slate-200 selection:bg-primary/30 selection:text-white overflow-x-hidden">
 
-    <!-- ================= NAVBAR (Glass Red) ================= -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+    <!-- ================= NAVBAR ================= -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <!-- Logo Image -->
-                <img src="assets/images/dark-removebg-preview.png" alt="SmartOneDev Logo"
-                    class="w-24 h-auto drop-shadow-[0_0_15px_rgba(220,38,38,0.5)] hover:drop-shadow-[0_0_25px_rgba(220,38,38,0.8)] transition-all duration-300">
+            <!-- Logo Text -->
+            <a href="#" class="flex items-center gap-2 group">
+                <!-- <div
+                    class="bg-gradient-to-br from-primary to-accent-gold p-2 rounded-xl group-hover:rotate-12 transition-transform shadow-lg shadow-primary/20"> -->
+                <img src="assets/images/dark-removebg-preview.png" alt="SmartOneDev Logo" class="w-16 object-contain">
+                <!-- </div> -->
                 <!-- <span class="text-2xl font-extrabold tracking-tight">
-                    <span class="text-white drop-shadow-[0_0_5px_rgba(220,38,38,0.8)]">SmartOne</span><span
-                        class="text-primary-glow">Dev</span>
+                    <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-glow to-accent-gold">SmartOne</span>
+                    <span class="text-white">DEV</span>
                 </span> -->
             </a>
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8 font-medium">
                 <a href="#beranda"
-                    class="nav-link text-slate-300 hover:text-primary-glow transition-colors text-sm uppercase tracking-widest hover:drop-shadow-[0_0_8px_rgba(220,38,38,0.8)]">Beranda</a>
+                    class="nav-link text-slate-300 hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-[2px] after:w-0 after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all">Beranda</a>
                 <a href="#tentang"
-                    class="nav-link text-slate-300 hover:text-primary-glow transition-colors text-sm uppercase tracking-widest hover:drop-shadow-[0_0_8px_rgba(220,38,38,0.8)]">Tentang</a>
+                    class="nav-link text-slate-300 hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-[2px] after:w-0 after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all">Tentang</a>
                 <a href="#karya"
-                    class="nav-link text-slate-300 hover:text-primary-glow transition-colors text-sm uppercase tracking-widest hover:drop-shadow-[0_0_8px_rgba(220,38,38,0.8)]">Karya</a>
+                    class="nav-link text-slate-300 hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-[2px] after:w-0 after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all">Karya</a>
                 <a href="#kolaborasi"
-                    class="nav-link text-slate-300 hover:text-primary-glow transition-colors text-sm uppercase tracking-widest hover:drop-shadow-[0_0_8px_rgba(220,38,38,0.8)]">Kolaborasi</a>
-
-                <a href="https://github.com/smartonesda" target="_blank"
-                    class="relative overflow-hidden bg-dark-900 text-white border border-slate-700 px-6 py-2 rounded-none transform skew-x-[-10deg] hover:bg-dark-800 hover:border-white transition-all group">
-                    <span
-                        class="block transform skew-x-[10deg] font-bold tracking-widest text-sm flex items-center gap-2">
-                        <i data-lucide="github" class="w-4 h-4"></i> SHOW GITHUB
-                    </span>
+                    class="nav-link text-slate-300 hover:text-primary transition-colors relative after:absolute after:bg-primary after:h-[2px] after:w-0 after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all">Kolaborasi</a>
+                <a target="_blank" href="https://www.instagram.com/smkantartika1sda/?hl=id"
+                    class="bg-gradient-to-r from-primary to-accent-gold hover:opacity-90 text-white px-6 py-2.5 rounded-full font-bold transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 active:scale-95 flex items-center gap-2">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> Gabung
                 </a>
             </div>
 
@@ -93,13 +100,17 @@
             </button>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu"
-            class="hidden md:hidden absolute w-full glass-red border-b border-red-900/50 p-4 flex flex-col gap-4 shadow-2xl mt-4">
-            <a href="#beranda" class="mobile-link text-white p-2 hover:bg-red-900/30 rounded">Beranda</a>
-            <a href="#tentang" class="mobile-link text-white p-2 hover:bg-red-900/30 rounded">Tentang</a>
-            <a href="#karya" class="mobile-link text-white p-2 hover:bg-red-900/30 rounded">Karya</a>
-            <a href="#kolaborasi" class="mobile-link text-white p-2 hover:bg-red-900/30 rounded">Kolaborasi</a>
+            class="hidden md:hidden absolute w-full bg-dark-900/95 backdrop-blur-xl border-b border-dark-800 p-4 flex flex-col gap-4 shadow-2xl">
+            <a href="#beranda" class="mobile-link text-white p-2 hover:bg-dark-800 rounded-lg">Beranda</a>
+            <a href="#tentang" class="mobile-link text-white p-2 hover:bg-dark-800 rounded-lg">Tentang</a>
+            <a href="#karya" class="mobile-link text-white p-2 hover:bg-dark-800 rounded-lg">Karya</a>
+            <a href="#kolaborasi" class="mobile-link text-white p-2 hover:bg-dark-800 rounded-lg">Kolaborasi</a>
+            <a target="_blank" href="https://www.instagram.com/smkantartika1sda/?hl=id"
+                class="bg-gradient-to-r from-primary to-accent-gold hover:opacity-90 text-white px-6 py-2.5 rounded-full font-bold transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 active:scale-95 flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4"></i> Gabung
+            </a>
         </div>
     </nav>
 
@@ -107,294 +118,601 @@
     <section id="beranda" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <!-- Background Effects -->
         <div class="absolute inset-0 bg-dark-950">
-            <div class="cyber-grid absolute inset-0 opacity-40"></div>
-            <!-- Red Glowing Orbs -->
+            <div class="cyber-grid absolute inset-0 opacity-30"></div>
+            <!-- Glowing Orbs based on RED/GOLD colors -->
             <div
-                class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[150px] animate-pulse-slow">
+                class="absolute top-20 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 animate-pulse-slow">
             </div>
-            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-red-900/30 rounded-full blur-[120px] animate-pulse-slow"
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-gold/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 animate-pulse-slow"
                 style="animation-delay: 2s;"></div>
+            <div
+                class="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-primary-glow/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2">
+            </div>
         </div>
 
-        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
-            <!-- Badge -->
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+            <!-- Badge (Updated Text) -->
             <div data-aos="fade-down"
-                class="inline-flex items-center gap-3 bg-red-950/50 border border-primary/40 backdrop-blur-md rounded-full px-5 py-2 mb-8 shadow-[0_0_20px_rgba(220,38,38,0.3)]">
-                <span class="relative flex h-3 w-3">
+                class="inline-flex items-center gap-2 bg-dark-900/80 border border-primary/30 backdrop-blur-md rounded-full px-4 py-1.5 mb-8 shadow-lg shadow-primary/10">
+                <span class="relative flex h-2.5 w-2.5">
                     <span
-                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
                 </span>
-                <span class="text-sm text-red-100 font-mono tracking-widest uppercase">System Online • v.2.0.24</span>
+                <span class="text-sm text-primary-glow font-semibold tracking-wide uppercase">SMKS ANTARTIKA 1
+                    SIDOARJO</span>
             </div>
 
             <!-- Main Title -->
-            <h1 data-aos="zoom-in"
-                class="text-6xl md:text-8xl font-black text-white mb-6 leading-tight tracking-tighter drop-shadow-2xl">
-                SMARTONE<span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">DEV</span>
+            <h1 data-aos="fade-up" data-aos-delay="100"
+                class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
+                The Next Gen of <br />
+                <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary-glow to-accent-gold animate-gradient-x">
+                    Tech Innovators
+                </span>
             </h1>
 
-            <h2 data-aos="fade-up" data-aos-delay="100"
-                class="text-2xl md:text-3xl text-slate-300 mb-8 font-light tracking-wide">
-                <span class="text-primary font-bold">SMKS Antartika 1</span> RPL Division
-            </h2>
-
             <p data-aos="fade-up" data-aos-delay="200"
-                class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed border-l-2 border-primary/50 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
-                Wadah elit siswa Rekayasa Perangkat Lunak. Kami tidak hanya menulis kode, kami merancang masa depan
-                dengan <span class="text-white font-bold bg-primary/20 px-1">passion</span> dan <span
-                    class="text-white font-bold bg-primary/20 px-1">inovasi</span>.
+                class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Wadah kolaborasi siswa Rekayasa Perangkat Lunak untuk berinovasi, berbagi kode, dan membangun solusi
+                teknologi masa depan. Dari SMKS Antartika 1 Sidoarjo untuk dunia.
             </p>
 
             <!-- CTAs -->
             <div data-aos="fade-up" data-aos-delay="300"
-                class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                class="flex flex-col sm:flex-row gap-5 justify-center items-center">
                 <a href="#karya"
-                    class="group relative w-full sm:w-auto overflow-hidden bg-primary text-white px-8 py-4 font-bold text-lg tracking-wider shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_40px_rgba(220,38,38,0.6)] transition-all skew-x-[-10deg]">
-                    <span class="block transform skew-x-[10deg] flex items-center justify-center gap-2">
-                        EXPLORE PROJECTS <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    class="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-primary to-accent-gold p-[2px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark-950 font-bold w-full sm:w-auto">
+                    <span
+                        class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-dark-950 px-8 py-1 text-sm font-bold text-white backdrop-blur-3xl transition-all group-hover:bg-transparent group-hover:text-white gap-2">
+                        Eksplorasi Karya
+                        <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                     </span>
-                    <div
-                        class="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    </div>
                 </a>
 
                 <a href="https://github.com/smartonesda" target="_blank"
-                    class="md:hidden block w-full sm:w-auto px-8 py-4 border border-slate-600 hover:border-white text-slate-300 hover:text-white font-bold text-lg tracking-wider transition-all skew-x-[-10deg] bg-dark-900/50 hover:bg-dark-800">
-                    <span class="block transform skew-x-[10deg] flex items-center justify-center gap-2">
-                        <i data-lucide="github" class="w-5 h-5"></i> GITHUB
-                    </span>
+                    class="flex items-center justify-center gap-2 bg-dark-800/50 hover:bg-dark-800 border border-dark-700 hover:border-slate-500 text-white px-8 h-14 rounded-full text-sm font-bold transition-all w-full sm:w-auto backdrop-blur-md">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                    GitHub Repository
                 </a>
-            </div>
-
-            <!-- Decor Elements -->
-            <div
-                class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-px h-24 bg-gradient-to-b from-primary to-transparent animate-pulse">
             </div>
         </div>
     </section>
 
-    <!-- ================= SEAMLESS TECH MARQUEE (FIXED) ================= -->
-    <div class="bg-black/50 border-y border-red-900/30 overflow-hidden relative z-20 backdrop-blur-sm py-6">
-        <!-- Efek Fade di Kiri Kanan -->
-        <div class="absolute left-0 top-0 h-full w-20 md:w-40 bg-gradient-to-r from-dark-950 to-transparent z-10"></div>
-        <div class="absolute right-0 top-0 h-full w-20 md:w-40 bg-gradient-to-l from-dark-950 to-transparent z-10">
-        </div>
+    <!-- ================= TECH STACK MARQUEE ================= -->
+    <div class="bg-dark-900 py-8 border-y border-dark-800 overflow-hidden relative z-20">
+        <div class="absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-dark-900 to-transparent z-10"></div>
+        <div class="absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-dark-900 to-transparent z-10"></div>
 
-        <!-- Wrapper Marquee -->
-        <div class="flex w-max overflow-hidden group">
-            <!-- 
-                LOGIKA SEAMLESS: 
-                Kita buat 2 set konten identik di dalam container.
-                Animasinya bergerak dari 0 ke -50%.
-                Saat mencapai -50%, dia akan 'teleport' kembali ke 0 secara visual tidak terlihat.
-             -->
-            <div class="animate-marquee flex gap-16 items-center whitespace-nowrap px-8">
-                <!-- SET 1 -->
+        <div class="flex w-full overflow-hidden">
+            <div class="animate-marquee flex gap-16 items-center whitespace-nowrap py-2">
+                <!-- Tech Icons & Names Repeated (Adapted Colors) -->
                 <span class="tech-item"><i data-lucide="code-2" class="text-primary"></i> HTML5</span>
                 <span class="tech-item"><i data-lucide="file-code" class="text-blue-500"></i> CSS3</span>
-                <span class="tech-item"><i data-lucide="coffee" class="text-yellow-500"></i> JavaScript</span>
+                <span class="tech-item"><i data-lucide="coffee" class="text-yellow-400"></i> JavaScript</span>
                 <span class="tech-item"><i data-lucide="atom" class="text-cyan-400"></i> React</span>
                 <span class="tech-item"><i data-lucide="database" class="text-red-500"></i> Laravel</span>
-                <span class="tech-item"><i data-lucide="server" class="text-indigo-400"></i> PHP</span>
+                <span class="tech-item"><i data-lucide="server" class="text-indigo-500"></i> PHP</span>
                 <span class="tech-item"><i data-lucide="smartphone" class="text-blue-400"></i> Flutter</span>
-                <span class="tech-item"><i data-lucide="git-branch" class="text-orange-500"></i> Git</span>
-                <span class="tech-item"><i data-lucide="cpu" class="text-white"></i> Arduino</span>
-                <span class="tech-item"><i data-lucide="cloud" class="text-sky-300"></i> Tailwind</span>
+                <span class="tech-item"><i data-lucide="git-branch" class="text-primary-glow"></i> Git</span>
 
-                <!-- SET 2 (DUPLIKAT PERSIS DARI SET 1) -->
+                <!-- Repeat for smooth loop -->
                 <span class="tech-item"><i data-lucide="code-2" class="text-primary"></i> HTML5</span>
                 <span class="tech-item"><i data-lucide="file-code" class="text-blue-500"></i> CSS3</span>
-                <span class="tech-item"><i data-lucide="coffee" class="text-yellow-500"></i> JavaScript</span>
+                <span class="tech-item"><i data-lucide="coffee" class="text-yellow-400"></i> JavaScript</span>
                 <span class="tech-item"><i data-lucide="atom" class="text-cyan-400"></i> React</span>
                 <span class="tech-item"><i data-lucide="database" class="text-red-500"></i> Laravel</span>
-                <span class="tech-item"><i data-lucide="server" class="text-indigo-400"></i> PHP</span>
+                <span class="tech-item"><i data-lucide="server" class="text-indigo-500"></i> PHP</span>
                 <span class="tech-item"><i data-lucide="smartphone" class="text-blue-400"></i> Flutter</span>
-                <span class="tech-item"><i data-lucide="git-branch" class="text-orange-500"></i> Git</span>
-                <span class="tech-item"><i data-lucide="cpu" class="text-white"></i> Arduino</span>
-                <span class="tech-item"><i data-lucide="cloud" class="text-sky-300"></i> Tailwind</span>
+                <span class="tech-item"><i data-lucide="git-branch" class="text-primary-glow"></i> Git</span>
+
+                <span class="tech-item"><i data-lucide="code-2" class="text-primary"></i> HTML5</span>
+                <span class="tech-item"><i data-lucide="file-code" class="text-blue-500"></i> CSS3</span>
+                <span class="tech-item"><i data-lucide="coffee" class="text-yellow-400"></i> JavaScript</span>
+                <span class="tech-item"><i data-lucide="atom" class="text-cyan-400"></i> React</span>
+                <span class="tech-item"><i data-lucide="database" class="text-red-500"></i> Laravel</span>
             </div>
         </div>
     </div>
 
 
-    <!-- ================= TENTANG SECTION ================= -->
+    <!-- ================= TENTANG SECTION (INFORMATIF) ================= -->
     <section id="tentang" class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-accent-gold font-bold tracking-wider uppercase mb-2">Tentang Kami</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Lebih Dari Sekedar <span
+                            class="text-primary">Barisan Kode.</span></h3>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                        SmartOneDev adalah inisiatif kolektif siswa jurusan Rekayasa Perangkat Lunak (RPL) SMKS
+                        Antartika
+                        1 Sidoarjo. Kami percaya bahwa cara terbaik untuk belajar adalah dengan membangun proyek nyata
+                        dan berkolaborasi.
+                    </p>
 
-                <!-- Visual -->
-                <div data-aos="fade-right" class="relative group">
-                    <div
-                        class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
-                    </div>
-                    <div class="glass-card rounded-xl p-8 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 p-4 opacity-20"><i data-lucide="terminal"
-                                class="w-32 h-32 text-primary"></i></div>
-                        <h4 class="text-slate-500 font-mono text-xs mb-4">/root/mission.config</h4>
-                        <div class="space-y-4 font-mono text-sm">
-                            <p><span class="text-purple-400">const</span> <span
-                                    class="text-yellow-400">SmartOneDev</span>
-                                = {</p>
-                            <p class="pl-4">school: <span class="text-green-400">'SMKS Antartika 1 Sidoarjo'</span>,</p>
-                            <p class="pl-4">focus: [<span class="text-green-400">'Web'</span>, <span
-                                    class="text-green-400">'Mobile'</span>, <span class="text-green-400">'IoT'</span>],
-                            </p>
-                            <p class="pl-4">status: <span class="text-primary animate-pulse">'Always Learning'</span>
-                            </p>
-                            <p>}</p>
-                            <p class="text-slate-500">// Bersama membangun ekosistem digital.</p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start group">
+                            <div
+                                class="bg-dark-800 p-3 rounded-lg border border-dark-700 group-hover:border-primary transition-colors">
+                                <i data-lucide="rocket" class="text-primary w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4
+                                    class="text-white font-bold text-xl mb-1 group-hover:text-primary transition-colors">
+                                    Inovasi Berkelanjutan</h4>
+                                <p class="text-slate-500">Mendorong siswa untuk menciptakan solusi digital yang relevan
+                                    dengan masalah di sekitar sekolah dan masyarakat.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start group">
+                            <div
+                                class="bg-dark-800 p-3 rounded-lg border border-dark-700 group-hover:border-accent-gold transition-colors">
+                                <i data-lucide="users-2" class="text-accent-gold w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4
+                                    class="text-white font-bold text-xl mb-1 group-hover:text-accent-gold transition-colors">
+                                    Kolaborasi Lintas Angkatan</h4>
+                                <p class="text-slate-500">Menghilangkan sekat antar kelas. Senior membimbing junior,
+                                    junior memberikan perspektif segar.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div data-aos="fade-left">
-                    <h2 class="text-primary font-bold tracking-[0.2em] uppercase mb-2 text-sm flex items-center gap-2">
-                        <span class="w-8 h-[2px] bg-primary"></span> About Us
-                    </h2>
-                    <h3 class="text-4xl md:text-5xl font-black text-white mb-6">
-                        LEBIH DARI SEKEDAR <br> <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">KOMUNITAS.</span>
-                    </h3>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-8 border-l-4 border-dark-800 pl-4">
-                        SmartOnesDA adalah "Special Force"-nya anak RPL Antartika 1. Kami menggabungkan kedisiplinan
-                        sekolah dengan kreativitas startup teknologi. Disini, senior dan junior duduk sama rendah,
-                        berdiri sama tinggi untuk memecahkan masalah dengan kode.
-                    </p>
+                <!-- Visual Representation -->
+                <div data-aos="fade-left" class="relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent-gold/20 blur-3xl rounded-full">
+                    </div>
+                    <div
+                        class="relative bg-dark-900/50 border border-dark-700/50 backdrop-blur-xl rounded-2xl p-8 overflow-hidden shadow-2xl">
+                        <div class="absolute top-0 right-0 p-4 text-dark-700"><i data-lucide="terminal-square"
+                                class="w-12 h-12 opacity-50"></i></div>
+                        <pre class="font-mono text-sm text-slate-300 overflow-x-auto">
+<span class="text-primary">class</span> <span class="text-accent-gold">SmartOneDev</span> {
+  <span class="text-primary">constructor</span>() {
+    <span class="text-accent-gold">this</span>.school = <span class="text-green-400">"SMKS Antartika 1 Sidoarjo"</span>;
+    <span class="text-accent-gold">this</span>.passion = [<span class="text-green-400">"Coding"</span>, <span class="text-green-400">"Problem Solving"</span>];
+  }
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div
-                            class="flex items-center gap-4 p-4 rounded-lg bg-dark-900/50 border border-dark-800 hover:border-primary/50 transition-all">
-                            <div class="bg-primary/20 p-3 rounded text-primary"><i data-lucide="users"></i></div>
-                            <div>
-                                <h4 class="font-bold text-white">Kolaborasi</h4>
-                                <p class="text-xs text-slate-500">Lintas angkatan & skill</p>
-                            </div>
-                        </div>
-                        <div
-                            class="flex items-center gap-4 p-4 rounded-lg bg-dark-900/50 border border-dark-800 hover:border-primary/50 transition-all">
-                            <div class="bg-primary/20 p-3 rounded text-primary"><i data-lucide="rocket"></i></div>
-                            <div>
-                                <h4 class="font-bold text-white">Inovasi Nyata</h4>
-                                <p class="text-xs text-slate-500">Produk yang bisa dipakai</p>
-                            </div>
-                        </div>
+  <span class="text-primary">mission</span>() {
+    <span class="text-accent-gold">return</span> <span class="text-green-400">"Build, Share, Inspire."</span>;
+  }
+}
+
+<span class="text-slate-500">// Let's build the future together.</span>
+</pre>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- ================= PROJECT GALLERY SECTION ================= -->
     <section id="karya" class="py-24 bg-dark-900 relative">
+        <!-- Diagonal divider -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none" class="relative block h-[60px] w-full fill-dark-950">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z"></path>
+            </svg>
+        </div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Header -->
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-dark-800 pb-8">
+            <!-- Section Header & Filter -->
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                 <div data-aos="fade-right">
-                    <h2 class="text-primary font-bold tracking-[0.2em] uppercase mb-2 text-sm">Portfolio</h2>
-                    <h3 class="text-4xl font-black text-white">MAHAKARYA SISWA</h3>
+                    <h2 class="text-accent-gold font-bold tracking-wider uppercase mb-2">Showcase</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white">Galeri Karya Siswa</h3>
                 </div>
 
-                <div data-aos="fade-left" class="flex flex-wrap gap-2" id="filter-buttons">
-                    <button data-filter="All" class="filter-btn active">ALL</button>
-                    <button data-filter="Web App" class="filter-btn">WEB</button>
-                    <button data-filter="Mobile" class="filter-btn">MOBILE</button>
-                    <button data-filter="Game" class="filter-btn">GAME</button>
-                    <button data-filter="IoT" class="filter-btn">IoT</button>
+                <!-- Filter Buttons -->
+                <div data-aos="fade-left" class="flex flex-wrap gap-3" id="filter-buttons">
+                    <button data-filter="All"
+                        class="filter-btn active bg-primary text-white border-primary">All</button>
+                    <button data-filter="Web App" class="filter-btn bg-dark-950 text-slate-400 border-dark-800">Web
+                        App</button>
+                    <button data-filter="Mobile"
+                        class="filter-btn bg-dark-950 text-slate-400 border-dark-800">Mobile</button>
+                    <button data-filter="Game"
+                        class="filter-btn bg-dark-950 text-slate-400 border-dark-800">Game</button>
+                    <button data-filter="IoT" class="filter-btn bg-dark-950 text-slate-400 border-dark-800">IoT</button>
                 </div>
-
             </div>
 
-            <!-- Grid -->
+            <!-- Project Grid Container -->
             <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Javascript will inject cards here -->
+                <!-- Project cards will be injected here by Javascript -->
             </div>
         </div>
     </section>
 
-    <!-- ================= CTA / JOIN SECTION ================= -->
+
+    <!-- ================= KOLABORASI / JOIN SECTION ================= -->
     <section id="kolaborasi" class="py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-dark-950">
-            <div class="absolute bottom-0 right-0 w-full h-[500px] bg-gradient-to-t from-primary/10 to-transparent">
+            <div
+                class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px] translate-y-1/2 translate-x-1/2">
             </div>
         </div>
 
-        <div class="max-w-5xl mx-auto px-4 relative z-10 text-center">
-            <div data-aos="zoom-in" class="glass-red p-12 rounded-3xl relative overflow-hidden group">
-                <!-- Background Animation inside card -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Stats Counter -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 border-b border-dark-800 pb-12" data-aos="fade-up">
                 <div
-                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent animate-marquee">
+                    class="text-center p-6 bg-dark-900/50 rounded-2xl border border-dark-800 hover:border-primary/50 transition-colors group">
+                    <i data-lucide="users"
+                        class="w-10 h-10 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-4xl font-black text-white mb-1">500+</div>
+                    <div class="text-sm text-slate-400 font-bold uppercase tracking-widest">Siswa Aktif</div>
                 </div>
+                <div
+                    class="text-center p-6 bg-dark-900/50 rounded-2xl border border-dark-800 hover:border-accent-gold/50 transition-colors group">
+                    <i data-lucide="folder-git"
+                        class="w-10 h-10 text-accent-gold mx-auto mb-4 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-4xl font-black text-white mb-1">120+</div>
+                    <div class="text-sm text-slate-400 font-bold uppercase tracking-widest">Repo Project</div>
+                </div>
+                <div
+                    class="text-center p-6 bg-dark-900/50 rounded-2xl border border-dark-800 hover:border-primary-glow/50 transition-colors group">
+                    <i data-lucide="git-commit"
+                        class="w-10 h-10 text-primary-glow mx-auto mb-4 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-4xl font-black text-white mb-1">5k+</div>
+                    <div class="text-sm text-slate-400 font-bold uppercase tracking-widest">Total Commits</div>
+                </div>
+                <div
+                    class="text-center p-6 bg-dark-900/50 rounded-2xl border border-dark-800 hover:border-orange-500/50 transition-colors group">
+                    <i data-lucide="trophy"
+                        class="w-10 h-10 text-yellow-500 mx-auto mb-4 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-4xl font-black text-white mb-1">15+</div>
+                    <div class="text-sm text-slate-400 font-bold uppercase tracking-widest">Penghargaan</div>
+                </div>
+            </div>
 
-                <i data-lucide="git-pull-request" class="w-24 h-24 text-primary mx-auto mb-6 opacity-80"></i>
+            <!-- CTA Box -->
+            <div data-aos="zoom-in"
+                class="bg-gradient-to-br from-dark-900 to-dark-950 border border-primary/20 rounded-3xl p-8 md:p-16 overflow-hidden relative shadow-2xl shadow-primary/5">
+                <div class="absolute top-0 right-0 -mt-12 -mr-12 text-dark-800 opacity-50"><i
+                        data-lucide="git-pull-request" class="w-64 h-64"></i></div>
 
-                <h2 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase">
-                    Jangan Coding <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">Sendirian.</span>
-                </h2>
-                <p class="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
-                    Repository kami terbuka. Bug menunggu untuk di-fix. Fitur baru menunggu untuk dibuat. Bergabunglah
-                    dengan SmartOnesDA dan buat commit pertamamu.
-                </p>
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-12">
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                            Siap Untuk <span class="text-primary">Berkolaborasi?</span>
+                        </h2>
+                        <p class="text-slate-300 text-lg mb-8 max-w-xl">
+                            Jangan biarkan kodinganmu hanya tersimpan di laptop. Bergabunglah dengan repositori sekolah,
+                            jadilah kontributor, dan bangun portofoliomu sekarang.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="https://github.com/smartonesda" target="_blank"
+                                class="bg-primary hover:bg-primary-glow text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all shadow-lg shadow-primary/25 hover:shadow-primary/50 hover:-translate-y-1">
+                                <i data-lucide="git-branch-plus" class="w-5 h-5"></i>
+                                Mulai Berkontribusi
+                            </a>
+                        </div>
+                    </div>
 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://github.com/smartonesda" target="_blank"
-                        class="flex items-center justify-center gap-3 bg-white text-dark-950 px-8 py-4 font-bold text-lg rounded hover:bg-slate-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-                        <i data-lucide="github"></i> CONTRIBUTE NOW
-                    </a>
+                    <!-- Terminal Simulation Info -->
+                    <div class="flex-1 w-full max-w-lg">
+                        <div
+                            class="mockup-code bg-dark-950 border border-dark-800 rounded-xl overflow-hidden shadow-xl font-mono text-sm text-left relative group">
+                            <!-- Glowing border effect on hover -->
+                            <div
+                                class="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent-gold rounded-xl blur opacity-30 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-tilt">
+                            </div>
+
+                            <div class="relative bg-dark-950 p-6">
+                                <div class="flex gap-2 mb-4 border-b border-dark-800 pb-4 items-center">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                    <span class="text-slate-500 ml-2 text-xs">bash — 80x24</span>
+                                </div>
+                                <p class="text-slate-300 mb-2">$ git clone <span
+                                        class="text-primary">https://github.com/smartonesda/awesome-project.git</span>
+                                </p>
+                                <p class="text-accent-gold italic">Cloning into 'awesome-project'...</p>
+                                <p class="text-slate-400">remote: Enumerating objects: 104, done.</p>
+                                <p class="text-slate-400">remote: Total 104 (delta 35), reused 0 (delta 0)</p>
+                                <p class="text-green-400">Receiving objects: 100% (104/104), done.</p>
+                                <p class="text-slate-300 mt-4">$ cd awesome-project && npm install</p>
+                                <p class="text-slate-300">$ <span
+                                        class="animate-pulse bg-slate-200 w-2 h-5 inline-block align-middle"></span></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="bg-black pt-16 border-t border-red-900/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div>
-                    <div class="flex items-center gap-2 mb-6">
-                        <div class="bg-primary/10 p-1.5 rounded-sm skew-x-[-10deg]">
-                            <img src="assets/images/dark-removebg-preview.png" alt="Logo"
-                                class="w-8 h-auto transform skew-x-[10deg]">
-                        </div>
-                        <span class="text-xl font-black text-white tracking-tighter">SmartOneDev<span
-                                class="text-primary">DA</span></span>
-                    </div>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        Siwalanpanji, Kec. Buduran, Kabupaten Sidoarjo, Jawa Timur 61252.
-                        <br>Mencetak talenta digital masa depan.
-                    </p>
-                </div>
 
-                <div class="text-center md:text-left">
-                    <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6">Connect</h4>
-                    <div class="flex gap-4 justify-center md:justify-start">
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-dark-950 pt-16 border-t border-dark-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div
+                            class="bg-gradient-to-br from-primary to-accent-gold p-1.5 rounded-lg shadow-lg shadow-primary/20">
+                            <i data-lucide="code-2" class="text-white w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-white tracking-tight">SmartOneDev</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6 max-w-sm">
+                        Komunitas Developer Siswa SMKS Antartika 1 Sidoarjo. Membangun masa depan melalui inovasi
+                        teknologi dan semangat kolaborasi terbuka.
+                    </p>
+                    <div class="flex gap-4">
                         <a href="#"
-                            class="w-10 h-10 bg-dark-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"><i
-                                data-lucide="instagram" class="w-5 h-5"></i></a>
-                        <a href="#"
-                            class="w-10 h-10 bg-dark-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"><i
+                            class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"><i
                                 data-lucide="github" class="w-5 h-5"></i></a>
                         <a href="#"
-                            class="w-10 h-10 bg-dark-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"><i
-                                data-lucide="mail" class="w-5 h-5"></i></a>
+                            class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-slate-400 hover:bg-accent-gold hover:text-white transition-all"><i
+                                data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-slate-400 hover:bg-primary-glow hover:text-white transition-all"><i
+                                data-lucide="globe" class="w-5 h-5"></i></a>
                     </div>
                 </div>
 
-                <div class="text-right">
-                    <p class="text-slate-600 text-sm">
-                        &copy; 2025 SmartOnesDA. <br>
-                        Designed by <span class="text-primary font-bold">Riski Putra Alamzah</span>.
-                    </p>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Navigasi</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li><a href="#beranda"
+                                class="hover:text-primary transition-colors inline-flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-4 h-4"></i>Beranda</a></li>
+                        <li><a href="#tentang"
+                                class="hover:text-primary transition-colors inline-flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-4 h-4"></i>Tentang Kami</a></li>
+                        <li><a href="#karya"
+                                class="hover:text-primary transition-colors inline-flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-4 h-4"></i>Galeri Karya</a></li>
+                        <li><a href="https://github.com/smartonesda" target="_blank"
+                                class="hover:text-primary transition-colors inline-flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-4 h-4"></i>GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Kontak Sekolah</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary mt-1"></i>
+                            <span>Siwalanpanji, Kec. Buduran, Kabupaten Sidoarjo, Jawa Timur 61252</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary"></i>
+                            <a href="mailto:smks.antartika1.sda@gmail.com"
+                                class="hover:text-white transition-colors">smks.antartika1.sda@gmail.com</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="bg-dark-900 py-6 border-t border-dark-800 text-center text-sm text-slate-500">
+            <p>Dibuat dengan <i data-lucide="heart" class="w-4 h-4 inline text-red-500 fill-red-500"></i> dan <i
+                    data-lucide="coffee" class="w-4 h-4 inline text-yellow-500"></i> oleh <b><a
+                        href="https://riskiputraalamzah.my.id" target="_blank" rel="noopener noreferrer">Riski Putra
+                        Alamzah</a></b> &
+                Tim SmartOneDev.</p>
+            <p class="mt-2">&copy; 2025 SMKS Antartika 1 Sidoarjo. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- ================= JAVASCRIPT ================= -->
+
+    <!-- ================= JAVASCRIPT SECTION ================= -->
+
+    <!-- 1. Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- 2. Initialize AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/script.js" defer></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    </script>
+
+    <!-- 3. Custom Vanilla JS (Navbar & Project Filtering) -->
+    <script>
+        // --- DATA PROJECT (MOCKUP WITH RED THEME GRADIENTS) ---
+        const PROJECTS = [
+            {
+                id: 1, title: "Sistem Presensi QR", category: "Web App", description: "Aplikasi absensi siswa menggunakan QR Code terintegrasi WhatsApp gateway.", tech: ["Laravel", "MySQL", "Bootstrap"], author: "RPL Angkatan 24", stars: 120, collabOpen: true, bgGradient: "from-red-600 to-red-900", icon: "globe"
+            },
+            {
+                id: 2, title: "Antartika Learning", category: "Mobile", description: "Aplikasi E-Learning berbasis Android untuk materi produktif RPL.", tech: ["Flutter", "Firebase"], author: "Dev Team A", stars: 85, collabOpen: false, bgGradient: "from-red-500 to-stone-900", icon: "smartphone"
+            },
+            {
+                id: 3, title: "Space Shooter SDA", category: "Game", description: "Game edukasi pengenalan sejarah Sidoarjo dengan tema luar angkasa.", tech: ["Unity", "C#"], author: "Game Dev Club", stars: 200, collabOpen: true, bgGradient: "from-amber-600 to-red-900", icon: "gamepad-2"
+            },
+            {
+                id: 4, title: "Smart Canteen", category: "IoT", description: "Sistem pembayaran kantin cashless menggunakan kartu RFID siswa.", tech: ["Arduino", "Node.js", "React"], author: "IoT Division", stars: 156, collabOpen: true, bgGradient: "from-orange-600 to-red-800", icon: "cpu"
+            },
+            {
+                id: 5, title: "Portfolio Generator", category: "Web App", description: "Platform untuk generate CV dan portfolio siswa otomatis.", tech: ["React", "Tailwind"], author: "Putra & Friends", stars: 92, collabOpen: true, bgGradient: "from-red-500 to-amber-700", icon: "layout"
+            },
+            {
+                id: 6, title: "Perpus Digital", category: "Web App", description: "Manajemen peminjaman buku perpustakaan online.", tech: ["PHP Native", "MySQL"], author: "Kelas X RPL 1", stars: 45, collabOpen: false, bgGradient: "from-stone-700 to-red-900", icon: "book-open"
+            }
+        ];
+
+        // --- DOM ELEMENTS ---
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const projectGrid = document.getElementById('project-grid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        // --- NAVBAR SCROLL EFFECT ---
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                // Glass effect on scroll
+                navbar.classList.add('bg-dark-950/90', 'backdrop-blur-md', 'shadow-lg', 'py-2');
+                navbar.classList.remove('bg-transparent', 'py-4');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('bg-dark-950/90', 'backdrop-blur-md', 'shadow-lg', 'py-2');
+            }
+        });
+
+        // --- MOBILE MENU TOGGLE ---
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- PROJECT RENDERING & FILTERING ---
+
+        // Helper to determine glow color based on category
+        function getGlowColor(category) {
+            if (category === 'Game') return '#f59e0b'; // Gold
+            if (category === 'IoT') return '#ef4444'; // Red
+            return '#dc2626'; // Primary Red
+        }
+
+        // Function to generate HTML for a single project card
+        function generateCardHTML(project, index) {
+            const glowColor = getGlowColor(project.category);
+
+            // Set CSS variable for the specific card's hover glow
+            const styleString = `--glow-color: ${glowColor};`;
+
+            return `
+                <div class="project-card group bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 transition-all duration-500 hover:-translate-y-2 relative" style="${styleString}" data-aos="fade-up" data-aos-delay="${index * 100}">
+                    
+                    <!-- Thumbnail with gradient & icon -->
+                    <div class="h-56 w-full bg-gradient-to-br ${project.bgGradient} relative flex items-center justify-center overflow-hidden">
+                         <!-- Abstract background pattern inside thumbnail -->
+                         <div class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=')] bg-fixed"></div>
+                         
+                         <i data-lucide="${project.icon}" class="text-white/70 w-16 h-16 group-hover:scale-110 transition-transform duration-500 z-10 relative"></i>
+                         
+                         <!-- Overlay on hover -->
+                         <div class="absolute inset-0 bg-dark-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm z-20">
+                             <button class="bg-white text-dark-950 p-3 rounded-full hover:scale-110 transition-transform shadow-lg"><i data-lucide="github" class="w-5 h-5"></i></button>
+                             <button class="bg-primary text-white p-3 rounded-full hover:scale-110 transition-transform shadow-lg shadow-primary/50"><i data-lucide="arrow-right" class="w-5 h-5"></i></button>
+                         </div>
+                    </div>
+
+                    <div class="p-6 relative">
+                        <!-- Category Badge -->
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-dark-950 border border-dark-700" style="color: ${glowColor}">
+                                ${project.category}
+                            </span>
+                            ${project.collabOpen ? `
+                            <span class="flex items-center gap-1 text-[10px] font-bold uppercase text-green-400 bg-green-400/10 px-2 py-1 rounded-full border border-green-400/20">
+                                <i data-lucide="users" class="w-3 h-3"></i> Open
+                            </span>` : ''}
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-1">${project.title}</h3>
+                        <p class="text-slate-400 text-sm mb-6 line-clamp-2 leading-relaxed">${project.description}</p>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            ${project.tech.map(t => `<span class="text-xs text-slate-300 bg-dark-950 border border-dark-700 px-2.5 py-1 rounded-md font-mono">${t}</span>`).join('')}
+                        </div>
+
+                        <!-- Footer Info -->
+                        <div class="flex items-center justify-between pt-4 border-t border-dark-700/50">
+                            <div class="flex items-center gap-2 text-slate-400 text-sm font-medium">
+                                <div class="w-7 h-7 rounded-md bg-gradient-to-tr from-dark-700 to-dark-800 flex items-center justify-center text-xs text-white font-bold border border-dark-600 shadow-inner">
+                                    ${project.author.charAt(0)}
+                                </div>
+                                ${project.author}
+                            </div>
+                            <div class="flex items-center gap-1 text-yellow-500 text-sm font-bold bg-yellow-500/10 px-2 py-1 rounded-lg">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                ${project.stars}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to render projects based on filter
+        function renderProjects(filter) {
+            // Clear current grid
+            projectGrid.innerHTML = '';
+
+            const filteredData = filter === 'All'
+                ? PROJECTS
+                : PROJECTS.filter(p => p.category === filter);
+
+            // Generate and append HTML with animation delay index
+            filteredData.forEach((project, index) => {
+                projectGrid.innerHTML += generateCardHTML(project, index);
+            });
+
+            // Re-initialize icons for newly added elements
+            lucide.createIcons();
+            // Refresh AOS to detect new elements
+            AOS.refresh();
+        }
+
+        // Handle Filter Button Clicks
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filterButtons.forEach(b => b.classList.remove('active', 'bg-primary', 'text-white', 'border-primary', 'shadow-lg', 'shadow-primary/25'));
+                filterButtons.forEach(b => b.classList.add('bg-dark-950', 'text-slate-400', 'border-dark-800'));
+
+                btn.classList.remove('bg-dark-950', 'text-slate-400', 'border-dark-800');
+                btn.classList.add('active', 'bg-primary', 'text-white', 'border-primary', 'shadow-lg', 'shadow-primary/25');
+
+                // Render filtered projects
+                renderProjects(btn.getAttribute('data-filter'));
+            });
+        });
+
+        // Initial Render
+        renderProjects('All');
+
+        // --- SCROLL SPY FOR NAVBAR ---
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>
